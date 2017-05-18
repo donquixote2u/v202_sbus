@@ -1,4 +1,4 @@
-/* v202_rx.ino -- An arduino sketch to test the protocol v202
+/* v202-receiver.ino -- An arduino sketch to test the protocol v202  ;  Wemos D1 mini (ESP8266) vsn of v202_rx.ino
  *
  * Copyright (C) 2016 execuc
  *

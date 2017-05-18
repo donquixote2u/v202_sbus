@@ -1,3 +1,5 @@
+18/5/17 cloned for use on Wemos (ESP8266) via Arduino IDE
+
 V202 Receiver
 ==========
 
