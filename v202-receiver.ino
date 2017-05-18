@@ -1,4 +1,5 @@
-/* v202-receiver.ino -- An arduino sketch to test the protocol v202  ;  Wemos D1 mini (ESP8266) vsn of v202_rx.ino
+/* v202-receiver.ino -- An arduino sketch to test the protocol v202  
+ *  Wemos D1 mini (ESP8266) vsn of v202_rx.ino cloned 18//5/17 
  *
  * Copyright (C) 2016 execuc
  *
@@ -19,8 +20,8 @@ void setup() {
   // SS pin must be set as output to set SPI to master !
   pinMode(SS, OUTPUT);
   Serial.begin(115200);
-  // Set CS pin to D7 and CE pin to D8
-  wireless.setPins(8,7);
+  // 18/5/17 for Wemos set CE pin to gpio4(D2), CS pin to gpio15(D8) 
+  wireless.setPins(4,15);
   protocol.init(&wireless);
   
   time = micros();
