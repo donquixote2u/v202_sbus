@@ -1,14 +1,17 @@
 18/5/17 cloned for use on Wemos (ESP8266) via Arduino IDE
 
-V202 Receiver fork with sbus output added
+Arduino/ESP8266 V202 Receiver with sbus output
 ==========
+This code implements a bridge between a v202 transmitter and any sbus-capable flight controller
 
-Goal
 --------------------
 Thanks to execuc for the core receiver code - https://github.com/execuc/v202-receiver.git
+and the ardiuino sbus library from bolderflight  https://github.com/bolderflight/SBUS.git
+
 This code decodes frames from the v202/v222/v262/v282... transmitter with an arduino and a nrf24L01 chip.
-thanks to Rivig for sharing the v202 protocol with his transmitter code (https://bitbucket.org/rivig/v202/src). I have included his decode functions.
-This code has not been tested enough and it is not reliable. So don't use it with dangerous rc model as planes, helicopters, cars...
+thanks to Rivig for sharing the v202 protocol with his transmitter code (https://bitbucket.org/rivig/v202/src). 
+
+no warranty is given or implied for the use of this code
 
 Hardware
 --------------------
