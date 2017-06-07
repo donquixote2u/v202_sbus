@@ -1,26 +1,26 @@
 18/5/17 cloned for use on Wemos (ESP8266) via Arduino IDE
 
-V202 Receiver
+V202 Receiver fork with sbus output added
 ==========
 
 Goal
 --------------------
-
+Thanks to execuc for the core receiver code - https://github.com/execuc/v202-receiver.git
 This code decodes frames from the v202/v222/v262/v282... transmitter with an arduino and a nrf24L01 chip.
-I want to thank Rivig for sharing the v202 protocol with his transmitter code (https://bitbucket.org/rivig/v202/src). I have included his decode functions.
+thanks to Rivig for sharing the v202 protocol with his transmitter code (https://bitbucket.org/rivig/v202/src). I have included his decode functions.
 This code has not been tested enough and it is not reliable. So don't use it with dangerous rc model as planes, helicopters, cars...
 
 Hardware
 --------------------
-
-I use a simple DIP arduino on a prototype board and nrf24l01+ chip to test it. But an arduino UNO or other with the same chip makes the job. Connect SCK, MISO, MOSI on pins D13, D12 and D11. Then connect CE and CS on digital pins you have chosen in the code (see the `wireless.setPins()` method below). Finally connect nrf24l01 VCC and GND to arduino 3.3V and GND pins.
+This version was developed using the BK2421 radio (nrf24l01 clone) from a Wltoys V666 control board, linked to a Wemos ESP8266 modile;
+. Connect SCK, MISO, MOSI to Wemos D5 D6 D7, corresponding to Arduino pins D13, D12 and D11. Then connect CE and CS on digital pins you have chosen in the code (see the `wireless.setPins()` method below). (I chose Wemos pins D2 for CE, D8 for CS. connect nrf24l01p/BK2421  VCC and GND to arduino 3.3V and GND pins. (bk2421 IRQ pin not used)
 
 Use
 --------------------
 
 There are two classes : 
 
- * nrf24l01p : handle the spi protocol to communicate with the nrf24l01p chip
+ * nrf24l01p : handle the spi protocol to communicate with the bk2421/nrf24l01p chip
  * v202_protocol : handle the v2xx protocol
 	
 v202_rx.ino is an example showing how use theses classes.
