@@ -1,9 +1,7 @@
-18/5/17 cloned for use on Wemos (ESP8266) via Arduino IDE
-
 Arduino/ESP8266 V202 Receiver with sbus output
 ==========
 This code implements a bridge between a v202 transmitter and any sbus-capable flight controller
-
+18/5/17 WIP UNDER DEVELOPMENT - DO NOT CLONE
 --------------------
 Thanks to execuc for the core receiver code - https://github.com/execuc/v202-receiver.git
 and the ardiuino sbus library from bolderflight  https://github.com/bolderflight/SBUS.git
@@ -15,7 +13,7 @@ no warranty is given or implied for the use of this code
 
 Hardware
 --------------------
-This version was developed using the BK2421 radio (nrf24l01 clone) from a Wltoys V666 control board, linked to a Wemos ESP8266 modile;
+This version was developed using the BK2421 radio (nrf24l01 clone) from a Wltoys V666 control board, linked to a Wemos ESP8266 module;
 . Connect SCK, MISO, MOSI to Wemos D5 D6 D7, corresponding to Arduino pins D13, D12 and D11. Then connect CE and CS on digital pins you have chosen in the code (see the `wireless.setPins()` method below). (I chose Wemos pins D2 for CE, D8 for CS. connect nrf24l01p/BK2421  VCC and GND to arduino 3.3V and GND pins. (bk2421 IRQ pin not used)
 
 Use
